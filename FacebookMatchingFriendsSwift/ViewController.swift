@@ -21,12 +21,39 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         else{
             print("Logged in..")
+            
+           FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields": "id, name, picture.type(large)" ] ).startWithCompletionHandler({ (connection, result, error) -> Void in
+                //picture.type(large)
+                if error == nil {
+                    print(result);
+                }
+                
+            })
+            
+            FBSDKGraphRequest.init(graphPath: "me/friends", parameters: ["fields": "id, name, picture{url}", "limit": "5"] ).startWithCompletionHandler({ (connection, result, error) -> Void in
+                
+                if error == nil {
+                    print(result);
+                }
+                
+            })
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
         
         let loginButton = FBSDKLoginButton()
         loginButton.delegate = self //important!
         loginButton.center = self.view.center
-        loginButton.readPermissions =  ["public_profile", "email", "user_friends"]
+        loginButton.readPermissions =  ["user_friends"]
         self.view.addSubview(loginButton)
         
     }
@@ -40,8 +67,16 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
 
-        
-        
+        if error != nil {
+            // Process error
+        }
+        else if result.isCancelled {
+            // Handle cancellations
+        }
+        else {
+            // Navigate to other view
+            
+        }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
