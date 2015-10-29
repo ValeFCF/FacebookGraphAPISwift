@@ -132,11 +132,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBAction func deleteRequestFB(sender: AnyObject) {
         
-        FBSDKGraphRequest.init(graphPath: "?ids=", parameters: nil , HTTPMethod: "DELETE").startWithCompletionHandler({ (connection, result, error) -> Void in
+        FBSDKGraphRequest.init(graphPath: "/", parameters: [ "ids":"332770816893178_891037637654953,954407707957585_891037637654953,1488676208128891_891037637654953,462670590583628_891037637654953" ] , HTTPMethod: "DELETE").startWithCompletionHandler({ (connection, result, error) -> Void in
             
             if error == nil {
                 
-                print("manda request")
+                print("elimina request")
                 print( result )
                 
             } else {
