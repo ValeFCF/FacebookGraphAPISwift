@@ -16,12 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85q-Rc-TQs">
+                                <rect key="frame" x="20" y="323" width="118" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Send Request"/>
+                                <connections>
+                                    <action selector="sendRequestFB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wc0-H3-kNl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxx-pD-1ek">
+                                <rect key="frame" x="159" y="323" width="120" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Get Requests"/>
+                                <connections>
+                                    <action selector="getRequestsFB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psK-QQ-b3R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHA-cy-h3A">
+                                <rect key="frame" x="77" y="369" width="156" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Delete Request"/>
+                                <connections>
+                                    <action selector="deleteRequestFB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Op1-2A-WxV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="194"/>
         </scene>
     </scenes>
 </document>
