@@ -33,32 +33,15 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             })
             */
             
-           /* 
+            /*
             FBSDKGraphRequest.init(graphPath: "me/friends", parameters: ["fields": "id, name, picture{url}", "limit": "5"] ).startWithCompletionHandler({ (connection, result, error) -> Void in
-                
-                if error == nil {
-                    print(result);
-                }
-                
+            
+            if error == nil {
+            print(result);
+            }
+            
             })
             */
-            
-            
-            FBSDKGraphRequest.init(graphPath: "me/friends", parameters: ["fields": "name, id"] ).startWithCompletionHandler({ (connection, result, error) -> Void in
-                
-                if error == nil {
-                    
-                    let data = result as! NSDictionary
-                    let data3 = data["data"]![0]["id"] as AnyObject
-
-                    print( data3 )
-                    
-                    
-                } else {
-                    print("Error: \(error.localizedDescription)")
-                }
-                
-            })
             
             self.performSegueWithIdentifier("SegueFriends", sender: nil)
             

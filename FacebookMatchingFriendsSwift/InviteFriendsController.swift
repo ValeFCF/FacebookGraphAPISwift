@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class InviteFriendsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -33,8 +34,58 @@ class InviteFriendsController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("CellFriend", forIndexPath: indexPath) as UITableViewCell
         
+        
+        var dataImage: NSData!
+        
+        FBSDKGraphRequest.init(graphPath: "me/friends", parameters: ["fields": "id, name, picture{url}"] ).startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            if error == nil {
+                
+                 let data = result as! NSDictionary
+                 let idFriend = data["data"]![0]["id"] as AnyObject
+                 let nameFriend = data["data"]![0]["name"] as! String
+                 let pictureFriend = data["data"]![0]["picture"]!["data"]!["url"] as! String
+                
+                
+                dataImage = pictureFriend.dataUsingEncoding(NSUTF8StringEncoding)
+                
+                print(nameFriend)
+                print(dataImage)
+                
+                let imageViewP = cell.viewWithTag(1) as! UIImageView
+                imageViewP.image = UIImage(data: dataImage)
+                
+                let nameFBfriend = cell.viewWithTag(2) as! UILabel
+                    nameFBfriend.text = nameFriend
+                
+            } else {
+                print("Error: \(error.localizedDescription)")
+            }
+            
+        })
+        
+        //(named: imagesArray[indexPath.row] )
+        
+        
+        /*
+// Get user profile pic
+var fbSession = PFFacebookUtils.session()
+var accessToken = fbSession.accessTokenData.accessToken
+let url = NSURL(string: "https://graph.facebook.com/me/picture?type=large&return_ssl_resources=1&access_token="+accessToken)
+let urlRequest = NSURLRequest(URL: url!)
+
+NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+
+// Display the image
+let image = UIImage(data: data)
+self.imgProfile.image = image
+
+}*/
+
+
         return cell
     }
 
