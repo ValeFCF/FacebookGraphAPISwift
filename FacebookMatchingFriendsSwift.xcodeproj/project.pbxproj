@@ -10,6 +10,7 @@
 		3B2219D81BDED01D0024E8B6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2219D51BDED01D0024E8B6 /* FBSDKCoreKit.framework */; };
 		3B2219D91BDED01D0024E8B6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2219D61BDED01D0024E8B6 /* FBSDKLoginKit.framework */; };
 		3B2219DA1BDED01D0024E8B6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2219D71BDED01D0024E8B6 /* FBSDKShareKit.framework */; };
+		3BD70CD31BE50A6000DC8274 /* InviteFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD70CD21BE50A6000DC8274 /* InviteFriendsController.swift */; };
 		3BE3CD911BDB17AC00541B68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3CD901BDB17AC00541B68 /* AppDelegate.swift */; };
 		3BE3CD931BDB17AC00541B68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3CD921BDB17AC00541B68 /* ViewController.swift */; };
 		3BE3CD961BDB17AE00541B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE3CD941BDB17AE00541B68 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		3B2219D51BDED01D0024E8B6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		3B2219D61BDED01D0024E8B6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		3B2219D71BDED01D0024E8B6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		3BD70CD21BE50A6000DC8274 /* InviteFriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsController.swift; sourceTree = "<group>"; };
 		3BE3CD8D1BDB17AB00541B68 /* FacebookMatchingFriendsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookMatchingFriendsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE3CD901BDB17AC00541B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE3CD921BDB17AC00541B68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				3BE3CD901BDB17AC00541B68 /* AppDelegate.swift */,
 				3BE3CD921BDB17AC00541B68 /* ViewController.swift */,
+				3BD70CD21BE50A6000DC8274 /* InviteFriendsController.swift */,
 				3BE3CD941BDB17AE00541B68 /* Main.storyboard */,
 				3BE3CD971BDB17AE00541B68 /* Assets.xcassets */,
 				3BE3CD991BDB17AE00541B68 /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE3CD931BDB17AC00541B68 /* ViewController.swift in Sources */,
+				3BD70CD31BE50A6000DC8274 /* InviteFriendsController.swift in Sources */,
 				3BE3CD911BDB17AC00541B68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

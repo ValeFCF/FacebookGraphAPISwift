@@ -60,7 +60,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
             })
             
-            
+            self.performSegueWithIdentifier("SegueFriends", sender: nil)
             
         }
         
@@ -89,7 +89,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         else {
             // Navigate to other view
-            
+            self.performSegueWithIdentifier("SegueFriends", sender: nil)
         }
     }
     
@@ -115,7 +115,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBAction func sendRequestFB(sender: AnyObject) {
         
-        FBSDKGraphRequest.init(graphPath: "me/apprequests", parameters: ["message": "request2", "object_id": "967617393297684" ] , HTTPMethod: "POST").startWithCompletionHandler({ (connection, result, error) -> Void in
+        FBSDKGraphRequest.init(graphPath: "/891037637654953/apprequests?to=967617393297684&message=RZ1", parameters: nil , HTTPMethod: "POST").startWithCompletionHandler({ (connection, result, error) -> Void in
                     
                     if error == nil {
                         
@@ -145,5 +145,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
         })
     }
+    
+    @IBAction func toFriendsFB(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("SegueFriends", sender: nil)
+    }
+    
+    
 }
 
