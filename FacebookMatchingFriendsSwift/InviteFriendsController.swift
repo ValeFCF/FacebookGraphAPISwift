@@ -45,7 +45,7 @@ class InviteFriendsController: UIViewController, UITableViewDataSource, UITableV
             if error == nil {
                 
                  let data = result as! NSDictionary
-                 let idFriend = data["data"]![0]["id"] as AnyObject
+                 //let idFriend = data["data"]![0]["id"] as AnyObject
                  let nameFriend = data["data"]![0]["name"] as! String
                  let pictureFriend = data["data"]![0]["picture"]!["data"]!["url"] as! String
                 
