@@ -37,26 +37,22 @@ class InviteFriendsController: UIViewController, UITableViewDataSource, UITableV
         
         let cell = tableView.dequeueReusableCellWithIdentifier("CellFriend", forIndexPath: indexPath) as UITableViewCell
         
-        
-        var dataImage: NSData!
-        
-        FBSDKGraphRequest.init(graphPath: "me/friends", parameters: ["fields": "id, name, picture{url}"] ).startWithCompletionHandler({ (connection, result, error) -> Void in
+        FBSDKGraphRequest.init(graphPath: "me/friends", parameters: [ "fields": "id, name, picture.type(large){url}" ] ).startWithCompletionHandler({ (connection, result, error) -> Void in
             
             if error == nil {
                 
-                 let data = result as! NSDictionary
-                 //let idFriend = data["data"]![0]["id"] as AnyObject
-                 let nameFriend = data["data"]![0]["name"] as! String
-                 let pictureFriend = data["data"]![0]["picture"]!["data"]!["url"] as! String
+                let data = result as! NSDictionary
+                let nameFriend = data["data"]![0]["name"] as! String
+                let pictureFriend = data["data"]![0]["picture"]!["data"]!["url"] as! String
                 
-                
-                dataImage = pictureFriend.dataUsingEncoding(NSUTF8StringEncoding)
+                let url = NSURL(string: pictureFriend)
+                let picData = NSData(contentsOfURL: url!)
                 
                 print(nameFriend)
-                print(dataImage)
+                //print(picData)
                 
                 let imageViewP = cell.viewWithTag(1) as! UIImageView
-                imageViewP.image = UIImage(data: dataImage)
+                imageViewP.image = UIImage(data: picData!)
                 
                 let nameFBfriend = cell.viewWithTag(2) as! UILabel
                     nameFBfriend.text = nameFriend
