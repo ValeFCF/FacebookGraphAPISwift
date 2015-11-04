@@ -117,8 +117,7 @@
 				3BE3CD991BDB17AE00541B68 /* LaunchScreen.storyboard */,
 				3BE3CD9C1BDB17AE00541B68 /* Info.plist */,
 			);
-			name = FacebookGraphAPISwift;
-			path = FacebookMatchingFriendsSwift;
+			path = FacebookGraphAPISwift;
 			sourceTree = "<group>";
 		};
 		3BE3CDA41BDB17B200541B68 /* FacebookGraphAPISwiftTests */ = {
@@ -127,8 +126,7 @@
 				3BE3CDA51BDB17B200541B68 /* FacebookGraphAPISwiftTests.swift */,
 				3BE3CDA71BDB17B200541B68 /* Info.plist */,
 			);
-			name = FacebookGraphAPISwiftTests;
-			path = FacebookMatchingFriendsSwiftTests;
+			path = FacebookGraphAPISwiftTests;
 			sourceTree = "<group>";
 		};
 		3BE3CDAF1BDB17B400541B68 /* FacebookGraphAPISwiftUITests */ = {
@@ -137,8 +135,7 @@
 				3BE3CDB01BDB17B500541B68 /* FacebookGraphAPISwiftUITests.swift */,
 				3BE3CDB21BDB17B600541B68 /* Info.plist */,
 			);
-			name = FacebookGraphAPISwiftUITests;
-			path = FacebookMatchingFriendsSwiftUITests;
+			path = FacebookGraphAPISwiftUITests;
 			sourceTree = "<group>";
 		};
 		3BE3CDBE1BDB1B3300541B68 /* Frameworks */ = {
