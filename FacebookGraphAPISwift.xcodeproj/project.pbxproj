@@ -427,7 +427,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = FacebookMatchingFriendsSwift/Info.plist;
+				INFOPLIST_FILE = FacebookGraphAPISwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.FacebookMatchingFriendsSwift;
@@ -444,7 +444,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = FacebookMatchingFriendsSwift/Info.plist;
+				INFOPLIST_FILE = FacebookGraphAPISwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.FacebookMatchingFriendsSwift;
@@ -456,7 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = FacebookMatchingFriendsSwiftTests/Info.plist;
+				INFOPLIST_FILE = FacebookGraphAPISwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.FacebookMatchingFriendsSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -468,7 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = FacebookMatchingFriendsSwiftTests/Info.plist;
+				INFOPLIST_FILE = FacebookGraphAPISwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.FacebookMatchingFriendsSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,7 +479,7 @@
 		3BE3CDBC1BDB17B700541B68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = FacebookMatchingFriendsSwiftUITests/Info.plist;
+				INFOPLIST_FILE = FacebookGraphAPISwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.FacebookMatchingFriendsSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,7 +491,7 @@
 		3BE3CDBD1BDB17B700541B68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = FacebookMatchingFriendsSwiftUITests/Info.plist;
+				INFOPLIST_FILE = FacebookGraphAPISwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.FacebookMatchingFriendsSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
