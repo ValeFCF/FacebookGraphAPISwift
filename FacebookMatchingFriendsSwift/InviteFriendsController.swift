@@ -64,22 +64,6 @@ class InviteFriendsController: UIViewController, UITableViewDataSource, UITableV
         })
         
         //(named: imagesArray[indexPath.row] )
-        
-        
-        /*
-// Get user profile pic
-var fbSession = PFFacebookUtils.session()
-var accessToken = fbSession.accessTokenData.accessToken
-let url = NSURL(string: "https://graph.facebook.com/me/picture?type=large&return_ssl_resources=1&access_token="+accessToken)
-let urlRequest = NSURLRequest(URL: url!)
-
-NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue()) { (response:NSURLResponse!, data:NSData!, error:NSError!) -> Void in
-
-// Display the image
-let image = UIImage(data: data)
-self.imgProfile.image = image
-
-}*/
 
 
         return cell
